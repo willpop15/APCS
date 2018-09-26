@@ -26,6 +26,7 @@ public class WillPopoliWeatherAnalysisV2 {
 
         }
         calculate(average, sum, temp);
+        hottestAndColdest(temp, days);
 
 
     }
@@ -41,5 +42,11 @@ public class WillPopoliWeatherAnalysisV2 {
             }
         }
         System.out.println(aboveavg + " days were above average."); //print
+    }
+    public static void hottestAndColdest(int[] temp, int days) {
+        System.out.println("Temperatures: " + Arrays.toString(temp));
+        Arrays.sort(temp);
+        System.out.println("Two coldest days: " + temp[0] + ", " + temp[1]);
+        System.out.println("Two hottest days: " + temp[temp.length-1] + ", " + temp[temp.length-2]);
     }
 }
